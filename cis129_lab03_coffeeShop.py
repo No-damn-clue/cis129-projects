@@ -2,10 +2,28 @@
 coffee = 5
 muffins = 4
 #set text and inputs
-Coffee_amount = int(input("How many coffees would you like?"))
-Muffins_amount = int(input("How many muffins would you like?"))
+coffeeAmount = int(input("How many coffees would you like?"))
+muffinsAmount = int(input("How many muffins would you like?"))
 #calculate total
-Total_amount = (coffee * Coffee_amount + muffins * Muffins_amount)
-Total_after_tax = (Total_amount * 1.06)
+totalCoffee = (coffee * coffeeAmount)
+totalMuffins = (muffins * muffinsAmount)
+total = (totalCoffee + totalMuffins)
+tax = ((totalCoffee + totalMuffins)*0.06)
+totalAfterTax = (total + tax)
 #display total
-print("Total is ", Total_after_tax)
+print("***************************************")
+print("My Coffee and Muffin Shop")
+print("Number of coffees bought?")
+print(coffeeAmount)
+print("Number of muffins bought?")
+print(muffinsAmount)
+print("***************************************")
+print("")
+print("***************************************")
+print("My Coffee and Muffin Shop Receipt")
+print(coffeeAmount ,"Coffee at $5 each: $" ,totalCoffee)
+print(muffinsAmount ,"Muffins at $4 each: $" ,totalMuffins)
+print("6% Tax: $" ,tax)
+print("---------")
+print("Total: $" ,total)
+print("Total is ", totalAfterTax)
