@@ -8,7 +8,7 @@ muffinsAmount = int(input("How many muffins would you like?"))
 totalCoffee = (coffee * coffeeAmount)
 totalMuffins = (muffins * muffinsAmount)
 total = (totalCoffee + totalMuffins)
-tax = ((totalCoffee + totalMuffins)*0.06)
+tax = (total * 0.06)
 totalAfterTax = (total + tax)
 #display total
 print("***************************************")
