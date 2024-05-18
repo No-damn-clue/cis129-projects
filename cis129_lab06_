@@ -1,5 +1,3 @@
-import math
-
 def main():
     # Get total number of hotdogs
     total = getTotalHotdogs()
