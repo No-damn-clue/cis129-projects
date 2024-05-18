@@ -1,1 +1,34 @@
 
+def main():
+    state = "continue"
+    while state == "continue":
+        print("Welcome to the Palindrome tester! Give you word to check it")
+        ispalindrome()
+        #Loop to alow multibe words to be tested
+        while True:
+            try:
+                answer = input("Do you want to coninue testing more words/senteces? (Yes/No)\n")
+                if answer.lower() == "y" or answer.lower() == "yes":
+                    state = "continue"
+                    break
+                if answer.lower() == "n" or answer.lower() == "no":
+                    state = "end"
+                    break
+                else:
+                    print("Please answer")
+            except ValueError:
+                   print("Error data")
+#define palindrome
+def ispalindrome():
+        word = input("Here:")
+        wordcheck = "".join(letter for letter in word if letter.isalnum()).lower()
+        print("In rough terms you word/sentece is:",
+              "\n Normal:", wordcheck,
+              "\n Reverse:",wordcheck[::-1])
+       #display if palindrome or not
+        if wordcheck == wordcheck[::-1]:
+            print(word, "is a palindrome!")
+        else:
+            print(word, "is not a palindrome")
+
+main()
