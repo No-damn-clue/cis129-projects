@@ -1,11 +1,9 @@
 
 def main():
-    #Section arragnment ditributed by SEATS, PRICE and SELLS.
+    #Set values for seats cost and sales
     A = [300,20,0]
     B = [500, 15,0]
     C = [200, 10,0]
-    #Here you can add the new Section name and its values as a list.
-
     endProgram = "no"
     while endProgram.lower() == "no" or endProgram.lower() == "n":
         welcomeMsg(A,B,C)
@@ -64,7 +62,7 @@ def askSells(A,B,C):
                     except ValueError:
                         print("An integer please")
 
-                    #Can copy-paste the while loop acordance to the new section and add it to the return. Same for other places
+                   
                     
                 return A[2], B[2], C[2]
 
