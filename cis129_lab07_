@@ -25,7 +25,7 @@ def main():
 
 def welcomeMsg(A,B,C):
     print("Welcome to the theather!, we currenly have availiable", A[0], "seats in A section.", B[0], "seats in B section. ", C[0], "seats in C section.")
-
+#prevent user error/negative seats
 def askSells(A,B,C):
     while True:
                 while True:
@@ -65,7 +65,7 @@ def askSells(A,B,C):
                    
                     
                 return A[2], B[2], C[2]
-
+#display seasts sold/sleft and profet made
 def incomeGenerated(A,B,C):
     aIncome = A[2] * A[1]
     bIncome = B[2] * B[1]
