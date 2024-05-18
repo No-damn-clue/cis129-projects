@@ -1,1 +1,21 @@
+People = int(input("Enter the maximum number of attendees: "))
+hotDogs = int(input("Enter the number of hot dogs each attendee will get: "))
 
+def getTotalHotDogs():
+    totalHotDogs = attendees * hotDogs
+    return totalHotDogs
+
+def showResults(totalHotDogs):
+    DOGS = 10
+    BUNS = 8
+    dogsLeft = (DOGS - totalHotDogs % DOGS) % DOGS
+    minDogs = (totalHotDogs // DOGS) + (0 ** (0 ** dogsLeft))
+    bunsLeft = (BUNS - attendees % BUNS) % BUNS
+    minBuns = (people // BUNS) + (0 ** (0 ** bunsLeft))
+    print("Minimum packages of hot dogs needed:", minDogs)
+    print("Minimum packages of hot dog buns needed:", minBuns)
+    print("Hot dogs remaining:", dogsLeft)
+    print("Hot dog buns remaining:", bunsLeft)
+
+totalHotDogs = getTotalHotDogs()
+showResults(totalHotDogs) 
