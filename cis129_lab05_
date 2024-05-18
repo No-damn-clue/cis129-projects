@@ -1,12 +1,10 @@
-# Lab 5 
-# calculates total payout by amount of bottles returned
-
+#set values
 totalDays = 7
 totalBottles = 0
 todayBottles = 0
 counter = 1
 keepGoing = 'y'
-
+#set loop to keep code running
 while keepGoing == 'y':
     print(f"Enter number of bottles returned for day "{counter}": ")
     todayBottles = int(input())
