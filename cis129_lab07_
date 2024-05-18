@@ -76,9 +76,9 @@ def displayResults(total,A,B,C):
     aLeft = A[0] - A[2]
     bLeft = B[0] - B[2]
     cLeft = C[0] - C[2]
-    print("\nWe have have gathered a total of", total,"dollars with the left over of:")
-    print("A section:",aLeft,"seats")
-    print("B section:",bLeft,"seats")
-    print("C section:",cLeft,"seats")
+    print("We have have gathered a total of", total,"dollars with the left over of:")
+    print("section A:",aLeft,"seats")
+    print("section B:",bLeft,"seats")
+    print("section C:",cLeft,"seats")
 
 main()
