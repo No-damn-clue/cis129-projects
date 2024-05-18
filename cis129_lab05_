@@ -1,1 +1,26 @@
+# Lab 5 
+# calculates total payout by amount of bottles returned
 
+totalDays = 7
+totalBottles = 0
+todayBottles = 0
+counter = 1
+keepGoing = 'y'
+
+while keepGoing == 'y':
+    print(f"Enter number of bottles returned for day "{counter}": ")
+    todayBottles = int(input())
+    totalBottles = totalBottles + todayBottles 
+    counter += 1
+    
+    if counter > totalDays:
+        payPerBottle = 0.10
+        totalPayout = totalBottles * payPerBottle
+            
+        print(f"The total amount of bottles returned: {totalBottles}")
+        print(f"The total amount paid out: {totalPayout:.1f}")
+        
+        keepGoing = input('Do you want to enter another week’s worth of data? (y or n): ')
+        if keepGoing == 'y':
+            counter = 1
+            totalBottles = 0
