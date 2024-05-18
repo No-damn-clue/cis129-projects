@@ -1,21 +1,36 @@
-People = int(input("Enter the maximum number of attendees: "))
-hotDogs = int(input("Enter the number of hot dogs each attendee will get: "))
+import math
 
-def getTotalHotDogs():
-    totalHotDogs = attendees * hotDogs
-    return totalHotDogs
+def main():
+    # Get total number of hotdogs
+    total = getTotalHotdogs()
 
-def showResults(totalHotDogs):
-    DOGS = 10
-    BUNS = 8
-    dogsLeft = (DOGS - totalHotDogs % DOGS) % DOGS
-    minDogs = (totalHotDogs // DOGS) + (0 ** (0 ** dogsLeft))
-    bunsLeft = (BUNS - attendees % BUNS) % BUNS
-    minBuns = (people // BUNS) + (0 ** (0 ** bunsLeft))
-    print("Minimum packages of hot dogs needed:", minDogs)
-    print("Minimum packages of hot dog buns needed:", minBuns)
-    print("Hot dogs remaining:", dogsLeft)
-    print("Hot dog buns remaining:", bunsLeft)
+    # Constants
+    dogs = 8 # Hotdogs in a package
+    buns = 10 # Hotdog buns in a package
 
-totalHotDogs = getTotalHotDogs()
-showResults(totalHotDogs) 
+    # Variables
+    dogsLeft = 0 # Left over hotdogs
+    bunsLeft = 0 # Left over hotdog buns
+    minDogs = 0 # Minimum packages of hotdogs
+    minBuns = 0 # Minimum packages of hotdog buns
+
+    # math
+    dogsLeft = (dogs - total % dogs) % dogs
+    minDogs = math.ceil(total / dogs)
+    bunsLeft = (buns - total % buns) % buns
+    minBuns = math.ceil(total / buns)
+    showResults(dogsLeft, minDogs, bunsLeft, minBuns)
+
+def getTotalHotdogs():
+    people = 0
+    hotdogs = 0
+    people = (int(input('Enter the number of people attending the cookout: ')))
+    hotdogs = (int(input('Enter the number of hotdogs for each person: ')))
+
+    #more math
+    total = people * hotdogs
+    return total
+# Display outcome
+def showResults(dogsLeft, minDogs, bunsLeft, minBuns):
+    print('Minimum packages of hotdogs needed: ', minDogs)
+    print('Minimum packages of hotdog buns needed: ', minBuns)
